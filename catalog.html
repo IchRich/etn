@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Каталог — ЭТНО</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="page page--dark">
+
+  <header class="header">
+    <div class="container header__container">
+      <a href="#" class="header__logo">ЭТНО</a>
+      <nav class="header__nav">
+        <a href="#" class="header__link">Каталог</a>
+        <a href="#" class="header__link">О компании</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <div class="breadcrumbs">
+    <div class="container">
+      <a href="index.html">Главная</a> / <span>Долбяки</span>
+    </div>
+  </div>
+
+  <section class="page-title container">
+    <h1>ДОЛБЯКИ</h1>
+  </section>
+
+  <div class="search container">
+    <input type="text" placeholder="Текст запроса" />
+    <button>Найти</button>
+  </div>
+
+
+  <main class="catalog container">
+    <div class="catalog__sidebar">
+      <div class="filter">
+        <h3>Вид инструмента</h3>
+        <label><input type="checkbox" /> Название вида</label>
+        <label><input type="checkbox" /> Название вида</label>
+        <label><input type="checkbox" /> Название вида</label>
+
+        <h3>Бренды</h3>
+        <select>
+          <option>Выбрать</option>
+        </select>
+
+        <h3>Цена</h3>
+        <input type="text" placeholder="от" />
+        <input type="text" placeholder="до" />
+
+        <h3>Наличие</h3>
+        <label><input type="checkbox" /> В наличии</label>
+
+        <button class="btn btn--primary">Применить</button>
+        <button class="btn btn--light">Сбросить</button>
+      </div>
+    </div>
+
+    <div class="catalog__content">
+      <div class="catalog__grid">
+
+        <div class="product-card">
+          <div class="product-card__image">
+            <img src="assets/img/tool1.png" alt="Инструмент" />
+          </div>
+          <div class="product-card__info">
+            <p class="product-card__art">Арт. х100183</p>
+            <h3 class="product-card__title">Долбяк дисковый М0,7 Z=90 A P18...</h3>
+            <p class="product-card__price">Цена с НДС: <b>3 480 руб</b></p>
+            <p class="product-card__price-alt">Цена без НДС: <b>2 900 руб</b></p>
+            <button class="btn btn--yellow">Добавить в корзину</button>
+          </div>
+        </div>
+
+
+      </div>
+
+      <button class="btn btn--dark center">Показать еще</button>
+    </div>
+  </main>
+
+
+  <section class="page-text container">
+    <p>Значимость этих проблем настолько очевидна, что...</p>
+    <p>С другой стороны, новая модель организационной...</p>
+    <p>Имеется спорная точка зрения, гласящая примерно...</p>
+  </section>
+
+
+  <section class="feedback container">
+    <div class="feedback__left">
+      <h2>НЕ НАШЛИ ТОВАР? НАПИШИТЕ НАМ</h2>
+    </div>
+    <form class="feedback__form">
+      <input type="text" placeholder="Имя" required />
+      <input type="text" placeholder="Телефон или email" required />
+      <textarea placeholder="Сообщение (необязательно)"></textarea>
+      <label>
+        <input type="checkbox" required />
+        Принимаю условия обработки персональных данных
+      </label>
+      <button class="btn btn--yellow">Оставить заявку</button>
+    </form>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__column">
+        <p>Подпишитесь на рассылку</p>
+        <form><input type="email" placeholder="Email"><button>→</button></form>
+      </div>
+      <div class="footer__column">
+        <p>Соц. сети:</p>
+        <ul>
+          <li>WhatsApp</li>
+          <li>Telegram</li>
+          <li>Вконтакте</li>
+          <li>Instagram</li>
+        </ul>
+      </div>
+      <div class="footer__column">
+        <p>Разделы сайта:</p>
+        <ul>
+          <li>Каталог</li>
+          <li>О компании</li>
+        </ul>
+      </div>
+      <div class="footer__column">
+        <p>Контакты:</p>
+        <address>
+          Республика Башкортостан, г. Уфа,<br>
+          ул. Ветошникова, 9А<br>
+          8-800-300-81-87<br>
+          info@etno.tools
+        </address>
+      </div>
+    </div>
+    <div class="footer__bottom">© ЭТНО — Сайт разработан KANT studio</div>
+  </footer>
+
+</body>
+</html>
