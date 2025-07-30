@@ -249,17 +249,18 @@ h2
   font-family: 'Inter';
 }
 
-.about_container div div
-{
-  width: 425px;
-}
 .about_left
 {
   display: flex;
 }
+
 .about_right
 {
   display: flex;
+}
+.about_event, .about_photo, .about_text, .about_signature
+{
+  width: 50%;
 }
 .about_misc
 {
