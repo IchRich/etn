@@ -334,7 +334,7 @@ h2
 
 
 .faq {
-  padding: 60px 20px;
+  padding: 60px 0px;
   color: #FFFFFF;
 }
 
@@ -410,9 +410,23 @@ h2
   width: 85%;
 }
 
+.text_container
+{
+  display: flex;
+  gap: 20px;
+}
+
+.text_item p
+{
+  font-size: 16px;
+  font-weight: 400;
+}
 
 .contact {
   background: #2B2B2B;
+  background-image: url(../img/figureupfooter.svg);
+  background-repeat: no-repeat;
+  background-position: left;
   padding: 60px 0;
 }
 
@@ -421,25 +435,61 @@ h2
   flex-wrap: wrap;
   gap: 40px;
 }
-
+.contact_info
+{
+  width: 50%;
+}
 .contact_form {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 10px;
 }
-
+.contact_form p
+{
+  font-family: 'Inter';
+  font-size: 30px;
+  font-weight: 600;
+  width: 70%;
+}
 .contact_form input,
 .contact_form textarea {
-  padding: 10px;
-  font-size: 14px;
+  padding: 20px 0px 10px 0px;
+  font-size: 20px;
+  font-family: 'Inter';
+  font-weight: 500;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #808080;
 }
-
+.contact_form button
+{
+  margin-top: 40px;
+}
 .contact_checkbox {
   display: flex;
   align-items: center;
+  font-weight: 400;
   gap: 10px;
-  font-size: 12px;
+  font-size: 16px;
+}
+
+.contact_checkbox input
+{
+  appearance: none;
+  -webkit-appearance: none;
+    appearance: none;
+    padding: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #FFFFFF;
+    background:none;
+    cursor: pointer;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    margin: 0;
+}
+.contact_checkbox input:checked {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
 }
 
 .footer {
@@ -548,7 +598,7 @@ h2
 .feedback_form input,
 .feedback_form textarea {
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #808080;
 }
 
 .footer {
@@ -668,7 +718,6 @@ h2
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
-  background: #fff;
   border: none;
 }
 
