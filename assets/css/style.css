@@ -359,7 +359,8 @@ h2
 .about_event img
 {
   width: 425px;
-  height: 360px;
+  height: auto;
+  max-width: 100%;
   margin: 10px 0 10px 0;
 }
 .about_signature
@@ -643,4 +644,21 @@ footer hr
 {
   padding-top: 10vh;
   margin-bottom: 20px;
+}
+.breadcrumbs div a
+{
+  opacity: 50%;
+}
+.catalog_search_bar 
+{
+  margin: 0 auto;
+  height: 60px;
+}
+.catalog_search_bar  input
+{
+  width: 90%;
+}
+.catalog_search_bar button
+{
+  width: 10%;
 }
