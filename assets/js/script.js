@@ -14,3 +14,40 @@ document.querySelectorAll('.faq_button').forEach(button => {
       }
     });
   });
+
+  let lastScrollY = window.scrollY;
+let ticking = false;
+const header = document.querySelector('.header');
+
+function updateHeader() {
+  const currentScrollY = window.scrollY;
+  
+  // Определяем направление скролла
+  const scrollingDown = currentScrollY > lastScrollY;
+  
+  // Добавляем фон при скролле не в самом верху
+  if (currentScrollY > 10) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+  
+  // Скрываем хедер при скролле вниз
+  if (scrollingDown && currentScrollY > 100) {
+    header.classList.add('hidden');
+  } 
+  // Показываем хедер при скролле вверх
+  else if (!scrollingDown && currentScrollY > 0) {
+    header.classList.remove('hidden');
+  }
+  
+  lastScrollY = currentScrollY;
+  ticking = false;
+}
+
+window.addEventListener('scroll', () => {
+  if (!ticking) {
+    window.requestAnimationFrame(updateHeader);
+    ticking = true;
+  }
+});
