@@ -61,8 +61,9 @@ a {
 
 .btn {
   display: inline-block;
-  padding: 19px 24px;
+  padding: 21px 24px;
   font-size: 16px;
+  font-weight: 400;
   border: none;
   cursor: pointer;
 }
@@ -75,7 +76,10 @@ a {
   text-align: center;
   align-items: center;
 }
-
+.btn--yellow:hover
+{
+  background-color: #FFDA6F;
+}
 .btn--transparent {
   border: 1px solid #fff;
   color: #fff;
@@ -93,14 +97,14 @@ a {
   align-items: center;
 }
 
-.header_logo {
-  font-weight: bold;
-  font-size: 24px;
-}
-
 .header_nav {
   display: flex;
   gap: 24px;
+}
+
+.header_link
+{
+  font-size: 16px;
 }
 
 .hero {
