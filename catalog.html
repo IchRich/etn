@@ -33,12 +33,38 @@
 
   <div class="catalog_search catalog_search_bar container">
     <input type="text" placeholder="Текст запроса" />
-    <button>Найти</button>
+    <button class="btn btn--yellow">Найти</button>
   </div>
 
-
+  <div class="container catalog_found">
+    <p>Найдено 100 товаров</p>
+    <div class="brand_buttons">
+      <button class="brand_button"><img src="assets/img/rusEthernet.svg" alt=""></button>
+      <button class="brand_button"><img src="assets/img/belTools.svg" alt=""></button>
+      <button class="brand_button"><img src="assets/img/microbor.svg" alt=""></button>
+      <button class="brand_button"><img src="assets/img/minolix1.svg" alt=""></button>
+      <button class="brand_button"><img src="assets/img/g.svg" alt=""></button>
+      <button class="brand_button">Показать все</button>
+    </div>
+    <div class="grid_buttons">
+      <button class="grid_button">
+        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="10" height="10" fill="#FBBB02"/>
+        <rect x="13" width="10" height="10" fill="#FBBB02"/>
+        <rect y="13" width="10" height="10" fill="#FBBB02"/>
+        <rect x="13" y="13" width="10" height="10" fill="#FBBB02"/>
+        </svg>
+     </button>
+      <button class="grid_button">
+        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="23" height="10" fill="white"/>
+        <rect y="13" width="23" height="10" fill="white"/>
+          </svg>
+      </button>
+    </div>
+  </div>
   <main class="catalog container">
-    <div class="catalog__sidebar">
+    <div class="catalog_sidebar">
       <div class="filter">
         <h3>Вид инструмента</h3>
         <label><input type="checkbox" /> Название вида</label>
@@ -62,18 +88,18 @@
       </div>
     </div>
 
-    <div class="catalog__content">
-      <div class="catalog__grid">
+    <div class="catalog_content">
+      <div class="catalog_grid">
 
         <div class="product-card">
-          <div class="product-card__image">
+          <div class="product-card_image">
             <img src="assets/img/tool1.png" alt="Инструмент" />
           </div>
-          <div class="product-card__info">
-            <p class="product-card__art">Арт. х100183</p>
-            <h3 class="product-card__title">Долбяк дисковый М0,7 Z=90 A P18...</h3>
-            <p class="product-card__price">Цена с НДС: <b>3 480 руб</b></p>
-            <p class="product-card__price-alt">Цена без НДС: <b>2 900 руб</b></p>
+          <div class="product-card_info">
+            <p class="product-card_art">Арт. х100183</p>
+            <h3 class="product-card_title">Долбяк дисковый М0,7 Z=90 A P18...</h3>
+            <p class="product-card_price">Цена с НДС: <b>3 480 руб</b></p>
+            <p class="product-card_price-alt">Цена без НДС: <b>2 900 руб</b></p>
             <button class="btn btn--yellow">Добавить в корзину</button>
           </div>
         </div>
@@ -94,10 +120,10 @@
 
 
   <section class="feedback container">
-    <div class="feedback__left">
+    <div class="feedback_left">
       <h2>НЕ НАШЛИ ТОВАР? НАПИШИТЕ НАМ</h2>
     </div>
-    <form class="feedback__form">
+    <form class="feedback_form">
       <input type="text" placeholder="Имя" required />
       <input type="text" placeholder="Телефон или email" required />
       <textarea placeholder="Сообщение (необязательно)"></textarea>

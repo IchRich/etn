@@ -208,7 +208,10 @@ h2
   padding: 10px;
   font-size: 16px;
 }
-
+.catalog_search .btn
+{
+  width: 8%;
+}
 .catalog_grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(540px, 1fr));
@@ -654,11 +657,49 @@ footer hr
   margin: 0 auto;
   height: 60px;
 }
-.catalog_search_bar  input
+.catalog_search_bar input
 {
-  width: 90%;
+  width: 92%;
+  padding: 10px;
+  font-size: 16px;
+  font-family: 'Inter';
+  color: #FFFFFF;
+  opacity: 40%;
+  background: none;
+  border: 1px solid #808080;
 }
-.catalog_search_bar button
+.catalog_found
 {
-  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
 }
+.catalog_found p
+{
+  font-weight: 500;
+  font-size: 22px;
+}
+.brand_buttons
+{
+  display: flex;
+  gap: 10px;
+}
+.brand_button
+{
+  background-color: #303030;
+  padding: 10px 20px;
+  border: none;
+  height: 60px;
+  color: #FFFFFF;
+}
+.brand_button:active
+{
+  box-shadow: inset 0 0 0 2px #FBBB02;
+}
+.grid_button
+{
+  background: none;
+  border: none;
+}
+
