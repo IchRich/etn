@@ -199,7 +199,7 @@
         <input placeholder="Сообщение (необязательно)"></input>
         <label class="contact_checkbox">
           <input type="checkbox" required>
-          Принимаю условия обработки персональных данных
+          Принимаю условия <a href="#">обработки персональных данных</a>
         </label>
         <button type="submit" class="btn btn--yellow">Оставить заявку</button>
       </form>
@@ -210,18 +210,22 @@
   
   <footer class="footer">
     <div class="container footer_container">
-      <img src="assets/img/logo.svg" alt="">
-      <div class="footer_column">
+      <div class="footer_column footer_form">
+        <img src="assets/img/logo.svg" alt="">
         <p>Подпишитесь на рассылку</p>
-        <form><input type="email" placeholder="Email"><button>→</button></form>
+        <form><div class="footer_form_send"><input type="email" placeholder="Ваш email"><button><img src="assets/img/arrow.svg" alt=""></button></div>
+        <label class="contact_checkbox">
+        <input type="checkbox" required>
+        Принимаю условия обработки персональных данных
+        </label></form>
       </div>
       <div class="footer_column">
         <p>Соц. сети:</p>
         <ul>
-          <li>WhatsApp</li>
-          <li>Telegram</li>
-          <li>Вконтакте</li>
-          <li>Instagram</li>
+          <li><a href="">WhatsApp</a></li>
+          <li><a href="">Telegram</a></li>
+          <li><a href="">Вконтакте</a></li>
+          <li><a href="">Instagram</a></li>
         </ul>
       </div>
       <div class="footer_column">
@@ -233,15 +237,16 @@
       </div>
       <div class="footer_column">
         <p>Контакты:</p>
-        <address>
-          Республика Башкортостан, г. Уфа,<br>
-          ул. Ветошникова, 9А<br>
-          8-800-300-81-87<br>
-          info@etno.tools
-        </address>
+        <li><a href="">Республика Башкортостан, г. Уфа,<br>
+          ул. Ветошникова, 99<br></a></li>
+        <li><a href="">8-800-300-81-87</a></li>
+        <li><a href="">info@etno.tools</a></li>
       </div>
     </div>
-    <div class="footer_bottom">© ЭТНО — Сайт разработан KANT studio</div>
+      <hr>
+      <div class="container footer_bottom"><a href="">Политика конфиденциальности</a>
+        
+      <a href="https://kant.studio/" target="_blank"><p>Сайт разработан</p><img src="assets/img/KantLogo.svg" alt=""></a></div>
   </footer>
 <script src="assets/js/script.js"></script>
 </body>

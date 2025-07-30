@@ -461,6 +461,7 @@ h2
   background: none;
   border: none;
   border-bottom: 1px solid #808080;
+  color: #666666;
 }
 .contact_form button
 {
@@ -468,10 +469,11 @@ h2
 }
 .contact_checkbox {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   font-weight: 400;
   gap: 10px;
   font-size: 16px;
+  margin-top: 10px;
 }
 
 .contact_checkbox input
@@ -491,7 +493,10 @@ h2
 .contact_checkbox input:checked {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
 }
-
+.contact_checkbox a
+{
+  border-bottom: 1px solid #FFFFFF;
+}
 .footer {
   background: #000;
   padding: 40px 0;
@@ -499,17 +504,100 @@ h2
 }
 
 .footer_container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 40px;
+  display: flex;
+  flex-wrap: wrap; /* Перенос элементов на новую строку */
+  gap: 40px; /* Отступы между элементами */
+  justify-content: space-between
 }
-
+.footer_form p
+{
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.footer_form form div input
+{
+  background: none;
+  border: none;
+  padding: 10px;
+  width: 80%;
+  font-size: 16px;
+  color: #666666;
+}
+.footer_form_send
+{
+  border: 1px solid #666666;
+  display: flex;
+  justify-content: space-between;
+}
+.footer_form_send button
+{
+  width: 20%;
+  background: none;
+  color: #FFFFFF;
+  border: none;
+  text-align: right;
+  padding: 10px;
+}
 .footer_bottom {
   text-align: center;
   padding-top: 20px;
   font-size: 12px;
   color: #777;
+  display: flex;
+  justify-content: space-between;
 }
+.footer_bottom a
+{
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+}
+
+.footer {
+  background: #111;
+  padding: 40px 0;
+  color: #ccc;
+}
+
+.footer_column {
+  margin-bottom: 20px;
+}
+.footer_column ul,li
+{
+  list-style: none;
+}
+.footer_column p
+{
+  font-family: 'Inter';
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+.footer_column li
+{
+  font-family: 'Inter';
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+footer hr
+{
+  width: 90%;
+  max-width: 1720px;
+  border-color: #FFFFFF;
+  opacity: 40%;
+  margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
 
 .page-title h1 {
   font-size: 40px;
@@ -601,15 +689,7 @@ h2
   border: 1px solid #808080;
 }
 
-.footer {
-  background: #111;
-  padding: 40px 0;
-  color: #ccc;
-}
 
-.footer_column {
-  margin-bottom: 20px;
-}
 
 /* d */
 .product-page {
