@@ -51,3 +51,73 @@ window.addEventListener('scroll', () => {
     ticking = true;
   }
 });
+// Функциональность для фильтров в каталоге
+document.addEventListener('DOMContentLoaded', function() {
+  // Обработчики для заголовков фильтров
+  const filterTitles = document.querySelectorAll('.filter_title');
+  
+  filterTitles.forEach(title => {
+    title.addEventListener('click', function() {
+      const filterSection = this.closest('.filter_section');
+      filterSection.classList.toggle('collapsed');
+    });
+  });
+
+  // Обработчики для чекбоксов фильтров
+  const filterCheckboxes = document.querySelectorAll('.filter_checkbox input[type="checkbox"]');
+  
+  filterCheckboxes.forEach(checkbox => {
+    checkbox.addEventListener('change', function() {
+      // Здесь можно добавить логику фильтрации
+      console.log('Фильтр изменен:', this.closest('.filter_checkbox').textContent.trim());
+    });
+  });
+
+  // Обработчики для кнопок фильтров
+  const applyButton = document.querySelector('.filter_buttons .btn--primary');
+  const resetButton = document.querySelector('.filter_buttons .btn--reset');
+  
+  if (applyButton) {
+    applyButton.addEventListener('click', function() {
+      // Логика применения фильтров
+      console.log('Применить фильтры');
+    });
+  }
+  
+  if (resetButton) {
+    resetButton.addEventListener('click', function() {
+      // Сброс всех чекбоксов
+      filterCheckboxes.forEach(checkbox => {
+        checkbox.checked = false;
+      });
+      
+      // Сброс полей ввода цены
+      const priceInputs = document.querySelectorAll('.price_input');
+      priceInputs.forEach(input => {
+        input.value = '';
+      });
+      
+      console.log('Сбросить фильтры');
+    });
+  }
+
+  // Обработчики для кнопок брендов
+  const brandButtons = document.querySelectorAll('.brand_button');
+  brandButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      // Убираем активный класс у всех кнопок
+      brandButtons.forEach(btn => btn.classList.remove('active'));
+      // Добавляем активный класс к нажатой кнопке
+      this.classList.add('active');
+    });
+  });
+
+  // Обработчик для кнопки "Показать еще"
+  const showMoreButton = document.querySelector('.btn--dark.center');
+  if (showMoreButton) {
+    showMoreButton.addEventListener('click', function() {
+      // Логика загрузки дополнительных товаров
+      console.log('Показать еще товаров');
+    });
+  }
+});

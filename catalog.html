@@ -31,9 +31,11 @@
     <h1>ДОЛБЯКИ</h1>
   </section>
 
-  <div class="catalog_search catalog_search_bar container">
-    <input type="text" placeholder="Текст запроса" />
-    <button class="btn btn--yellow">Найти</button>
+  <div class="container search_wrapper">
+      <img src="assets/img/IconSearch.svg" alt="Поиск" class="search_icon">
+      <input type="text" placeholder="Текст запроса" />
+      <button class="btn btn--yellow">Найти</button>
+    </div>
   </div>
 
   <div class="container catalog_found">
@@ -63,76 +65,184 @@
       </button>
     </div>
   </div>
-  <main class="catalog container">
-    <div class="catalog_sidebar">
-      <div class="filter">
-        <h3>Вид инструмента</h3>
-        <label><input type="checkbox" /> Название вида</label>
-        <label><input type="checkbox" /> Название вида</label>
-        <label><input type="checkbox" /> Название вида</label>
 
-        <h3>Бренды</h3>
-        <select>
-          <option>Выбрать</option>
-        </select>
-
-        <h3>Цена</h3>
-        <input type="text" placeholder="от" />
-        <input type="text" placeholder="до" />
-
-        <h3>Наличие</h3>
-        <label><input type="checkbox" /> В наличии</label>
-
-        <button class="btn btn--primary">Применить</button>
-        <button class="btn btn--light">Сбросить</button>
-      </div>
-    </div>
-
+<main class="catalog container">
     <div class="catalog_content">
-      <div class="catalog_grid">
+      <div class="carts_grid">
 
         <div class="product-card">
+          <p class="product_articul">Арт. ri.100.163</p>
           <div class="product-card_image">
-            <img src="assets/img/tool1.png" alt="Инструмент" />
+            <img src="assets/img/dolbnaylkDisk.jpg" alt="Инструмент" />
           </div>
           <div class="product-card_info">
-            <p class="product-card_art">Арт. х100183</p>
-            <h3 class="product-card_title">Долбяк дисковый М0,7 Z=90 A P18...</h3>
-            <p class="product-card_price">Цена с НДС: <b>3 480 руб</b></p>
-            <p class="product-card_price-alt">Цена без НДС: <b>2 900 руб</b></p>
+            <h3 class="product-card_title">Долбяк дисковый М0,7 Z=90 A P18 (2530-0343) 20гр dпос=31,75мм в Белгороде</h3>
+            <p class="product-card_availability">В наличии 1 шт</p>
+            <p class="product-card_price">Цена с НДС <b>3 480 рублей</b></p>
+            <p class="product-card_price-alt">Цена без НДС <b>2 900 рублей</b></p>
+            <button class="btn btn--yellow">Добавить в корзину</button>
+          </div>
+        </div>
+
+                <div class="product-card">
+          <p class="product_articul">Арт. ri.100.163</p>
+          <div class="product-card_image">
+            <img src="assets/img/dolbnaylkDisk.jpg" alt="Инструмент" />
+          </div>
+          <div class="product-card_info">
+            <h3 class="product-card_title">Долбяк дисковый М0,7 Z=90 A P18 (2530-0343) 20гр dпос=31,75мм в Белгороде</h3>
+            <p class="product-card_availability">В наличии 1 шт</p>
+            <p class="product-card_price">Цена с НДС <b>3 480 рублей</b></p>
+            <p class="product-card_price-alt">Цена без НДС <b>2 900 рублей</b></p>
             <button class="btn btn--yellow">Добавить в корзину</button>
           </div>
         </div>
 
 
+                <div class="product-card">
+          <p class="product_articul">Арт. ri.100.163</p>
+          <div class="product-card_image">
+            <img src="assets/img/dolbnaylkDisk.jpg" alt="Инструмент" />
+          </div>
+          <div class="product-card_info">
+            <h3 class="product-card_title">Долбяк дисковый М0,7 Z=90 A P18 (2530-0343) 20гр dпос=31,75мм в Белгороде</h3>
+            <p class="product-card_availability">В наличии 1 шт</p>
+            <p class="product-card_price">Цена с НДС <b>3 480 рублей</b></p>
+            <p class="product-card_price-alt">Цена без НДС <b>2 900 рублей</b></p>
+            <button class="btn btn--yellow">Добавить в корзину</button>
+          </div>
+        </div>
+
       </div>
 
-      <button class="btn btn--dark center">Показать еще</button>
+      <div style="width: 100%; text-align: center;">
+      <button class="btn btn--transparent center">Показать еще</button>
+      </div>
+    </div>
+
+    <div class="catalog_sidebar">
+      <div class="filter">
+        <div class="filter_section">
+          <h3 class="filter_title">Вид инструмента</h3>
+          <div class="filter_content">
+            <div class="filter_checkbox_grid">
+              <label class="filter_checkbox"><input type="checkbox" /> Название вида</label>
+              <label class="filter_checkbox"><input type="checkbox" /> Название вида</label>
+              <label class="filter_checkbox"><input type="checkbox" /> Название вида</label>
+              <label class="filter_checkbox"><input type="checkbox" /> Название вида</label>
+              <label class="filter_checkbox"><input type="checkbox" /> Название вида</label>
+              <label class="filter_checkbox"><input type="checkbox" /> Название вида</label>
+              <label class="filter_checkbox"><input type="checkbox" /> Название вида</label>
+              <label class="filter_checkbox"><input type="checkbox" /> Название вида</label>
+              <label class="filter_checkbox"><input type="checkbox" /> Название вида</label>
+              <label class="filter_checkbox"><input type="checkbox" /> Название вида</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="filter_section collapsed">
+          <h3 class="filter_title">Бренды</h3>
+          <div class="filter_content">
+            <label class="filter_checkbox"><input type="checkbox" /> Русский Инструмент</label>
+            <label class="filter_checkbox"><input type="checkbox" /> BelTools</label>
+            <label class="filter_checkbox"><input type="checkbox" /> BelTools</label>
+            <label class="filter_checkbox"><input type="checkbox" /> BelTools</label>
+            <label class="filter_checkbox"><input type="checkbox" /> BelTools</label>
+          </div>
+        </div>
+
+        <div class="filter_section collapsed">
+          <h3 class="filter_title">Цена</h3>
+          <div class="filter_content">
+            <div class="price_inputs">
+              <input type="text" placeholder="от" class="price_input" />
+              <input type="text" placeholder="до" class="price_input" />
+            </div>
+          </div>
+        </div>
+
+        <div class="filter_section collapsed">
+          <h3 class="filter_title">В наличии</h3>
+          <div class="filter_content">
+            <label class="filter_checkbox"><input type="checkbox" /> В наличии</label>
+            <label class="filter_checkbox"><input type="checkbox" /> Под заказ</label>
+          </div>
+        </div>
+
+        <div class="filter_section collapsed">
+          <h3 class="filter_title">Основной размер</h3>
+          <div class="filter_content">
+            <label class="filter_checkbox"><input type="checkbox" /> М0,5</label>
+            <label class="filter_checkbox"><input type="checkbox" /> М0,7</label>
+            <label class="filter_checkbox"><input type="checkbox" /> М1,0</label>
+            <label class="filter_checkbox"><input type="checkbox" /> М1,25</label>
+            <label class="filter_checkbox"><input type="checkbox" /> М1,5</label>
+          </div>
+        </div>
+
+        <div class="filter_section collapsed">
+          <h3 class="filter_title">Материал</h3>
+          <div class="filter_content">
+            <label class="filter_checkbox"><input type="checkbox" /> Быстрорежущая сталь</label>
+            <label class="filter_checkbox"><input type="checkbox" /> Твердый сплав</label>
+            <label class="filter_checkbox"><input type="checkbox" /> Порошковая сталь</label>
+          </div>
+        </div>
+
+        <div class="filter_section collapsed">
+          <h3 class="filter_title">Стандарт</h3>
+          <div class="filter_content">
+            <label class="filter_checkbox"><input type="checkbox" /> ГОСТ</label>
+            <label class="filter_checkbox"><input type="checkbox" /> ISO</label>
+            <label class="filter_checkbox"><input type="checkbox" /> DIN</label>
+          </div>
+        </div>
+
+        <div class="filter_buttons">
+          <button class="btn btn--primary">Применить</button>
+          <button class="btn btn--reset"><img src="assets/img/resetIcon.svg" alt="">Сбросить фильтр</button>
+        </div>
+      </div>
     </div>
   </main>
 
 
-  <section class="page-text container">
-    <p>Значимость этих проблем настолько очевидна, что...</p>
-    <p>С другой стороны, новая модель организационной...</p>
-    <p>Имеется спорная точка зрения, гласящая примерно...</p>
+  <section class="text">
+    <div class="container text_container">
+      <div class="text_item"><p>Значимость этих проблем настолько очевидна, что новая модель организационной деятельности влечет за собой процесс внедрения и модернизации соответствующих условий активизации. Значимость этих проблем настолько очевидна, что высококачественный прототип будущего проекта предполагает независимые способы реализации приоретизации разума над эмоциями. Как принято считать, явные признаки победы институционализации призывают нас к новым свершениям, которые, в свою очередь, должны быть подвергнуты целой серии независимых исследований! С другой стороны, глубокий уровень погружения требует от нас анализа направлений прогрессивного развития! 
+      </p></div>
+
+      <div class="text_item"><p>Лишь предприниматели в сети интернет, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объединены в целые кластеры себе подобных. Наше дело не так однозначно, как может показаться: синтетическое тестирование, в своём классическом представлении, допускает внедрение системы массового участия. Разнообразный и богатый опыт говорит нам, что сплочённость команды профессионалов играет важную роль в формировании форм воздействия. Вот вам яркий пример современных тенденций — дальнейшее развитие различных. 
+      </p></div>
+
+      <div class="text_item"><p>Вот вам яркий пример современных тенденций — дальнейшее развитие различных форм деятельности напрямую зависит от приоретизации разума над эмоциями. В своём стремлении повысить качество жизни, они забывают, что внедрение современных методик однозначно определяет каждого участника как способного принимать собственные решения касаемо как самодостаточных, так и внешне зависимых концептуальных решений. В целом, конечно, консультация с широким активом напрямую зависит от соответствующих условий активизации! Сложно сказать, почему тщательные исследования конкурентов могут быть объективно рассмотрены соответствующими инстанциями.
+      </p></div>
+
+      <div class="text_item"><p>Являясь всего лишь частью общей картины, диаграммы связей, превозмогая сложившуюся непростую экономическую ситуацию, ограничены исключительно образом мышления. Лишь сторонники тоталитаризма в науке объективно рассмотрены соответствующими инстанциями! С учётом сложившейся международной обстановки, постоянное информационно-пропагандистское обеспечение нашей деятельности предполагает независимые способы реализации кластеризации усилий. Кстати, активно развивающиеся страны третьего мира, инициированные исключительно синтетически, объединены в целые кластеры себе подобных. 
+      </p></div>
+
+      </div>
   </section>
 
 
-  <section class="feedback container">
-    <div class="feedback_left">
-      <h2>НЕ НАШЛИ ТОВАР? НАПИШИТЕ НАМ</h2>
+  <section class="contact contact_white">
+    <div class="container contact_container">
+      <div class="contact_info">
+        <h2 class="section-title">не нашли товар? напишите нам</h2>
+        <div class="contact_icon"><img src="assets/img/ttSolid.svg" alt=""></div>
+      </div>
+      <form class="contact_form" method="post">
+        <p>Заполните форму и мы обязательно с&nbsp;вами свяжемся</p>
+        <input type="text" id="name" placeholder="Имя" required>
+        <input type="text" id="telephoneOrEmail" placeholder="Телефон или email" required>
+        <input placeholder="Сообщение (необязательно)"></input>
+        <label class="contact_checkbox">
+          <input type="checkbox" required>
+          Принимаю условия <a href="#">обработки персональных данных</a>
+        </label>
+        <button type="submit" class="btn btn--yellow">Оставить заявку</button>
+      </form>
     </div>
-    <form class="feedback_form">
-      <input type="text" placeholder="Имя" required />
-      <input type="text" placeholder="Телефон или email" required />
-      <textarea placeholder="Сообщение (необязательно)"></textarea>
-      <label>
-        <input type="checkbox" required />
-        Принимаю условия обработки персональных данных
-      </label>
-      <button class="btn btn--yellow">Оставить заявку</button>
-    </form>
   </section>
 
 
