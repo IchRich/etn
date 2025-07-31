@@ -178,7 +178,10 @@ header
   letter-spacing: -0.03em;
   font-family: "Bebas Neue", sans-serif;
 }
-
+.page-title
+{
+  padding: 0;
+}
 .hero_subtitle {
   font-size: 25px;
   margin-bottom: 40px;
@@ -1609,7 +1612,65 @@ footer hr
   font-weight: 400;
   width: 85%;
 }
-
+.about_slider
+{
+  display: flex;
+  padding: 20px;
+  border: 1px solid #6A6A6A;
+}
+.about_slider_arrow
+{
+  background: transparent;
+  border: 1px solid #FBBB02;
+  padding: 6px;
+  height: 40px;
+  width: 40px;
+}
+.about_slider_thumb 
+{
+  width: 830px;
+  height: 470px;
+}
+.about_slider_caption
+{
+  align-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+}
+.about_slider_caption_text p
+{
+  font-size: 16px;
+  color: #FFFFFF;
+  opacity: 60%;
+  font-weight: 400;
+}
+.about_slider_caption_text p:first-of-type
+{
+  margin-bottom: 10px;
+}
+.about_slider_caption_text h3
+{
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.about_slider_controls
+{
+  display: flex;
+  gap: 10px;
+  padding: 0 20px 0 20px;
+  align-items: flex-end;
+}
+.about_slider_pagination
+{
+  font-size: 40px;
+  margin-left: 10px;
+}
+section
+{
+  padding: 60px 0 60px 0;
+}
 /* Адаптивность для страницы товара */
 @media (max-width: 1200px) {
   .product-main {
