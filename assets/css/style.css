@@ -175,7 +175,7 @@ header
   font-weight: 700;
   line-height: 90%;
   text-transform: uppercase;
-  letter-spacing: -3px;
+  letter-spacing: -0.03em;
   font-family: "Bebas Neue", sans-serif;
 }
 
@@ -1479,6 +1479,135 @@ footer hr
   padding: 20px;
   margin: 0;
   line-height: 1.4;
+}
+
+/* Страница о компании */
+
+.about_hero
+{
+  width: 100%;
+  padding-top: 2vh;
+}
+.about_title
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.about_life_subtitle
+{
+  margin: 0;
+}
+.about_title span
+{
+  width: 62%;
+}
+.about_title span p
+{
+  font-family: 'Inter';
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+.about_title span p:first-of-type
+{
+  text-align: right;
+}
+.about_life_grid
+{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Три равные колонки */
+  gap: 30px; /* Расстояние между элементами */
+  align-items: start; /* Выравнивание по верху */
+}
+.about_life_center
+{
+  height: 100%;
+}
+.about_photo_placeholder
+{
+  width: 48%;
+}
+.about_photo_placeholder img
+{
+  width: 100%;
+  height: 100%;
+}
+.about_life_years
+{
+  display: flex;
+  border: 1px solid #6A6A6A;
+  width: 48%; 
+  height: 225px;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: space-between;
+  align-content: space-between;
+  margin-left: 52%;
+}
+.about_life_years_number
+{
+  font-weight: 500;
+  font-size: 100px;
+  line-height: 0.8;
+}
+.about_life_left
+{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.about_life_photo_group .about_photo_placeholder
+{
+  width: 100%;
+  height: 100%;
+}
+.about_life_photo_group
+{
+  width: 100%;
+  height: 100%;
+}
+.about_life_years_label
+{
+  color: #FFFFFF;
+  opacity: 60%;
+  font-size: 20px;
+  font-weight: 400;
+}
+.about_life_right
+{
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+.about_life_stat
+{
+    display: flex;
+  border: 1px solid #6A6A6A;
+  width: 100%; 
+  height: 225px;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: space-between;
+  align-content: space-between;
+  gap: 20px;
+}
+.about_life_stat_number
+{
+  font-weight: 500;
+  font-size: 100px;
+  line-height: 0.8;
+}
+.about_life_stat_label
+{
+  color: #FFFFFF;
+  opacity: 60%;
+  font-size: 20px;
+  font-weight: 400;
+  width: 85%;
 }
 
 /* Адаптивность для страницы товара */
