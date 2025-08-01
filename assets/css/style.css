@@ -1069,6 +1069,8 @@ footer hr
 {
   border-color: #000;
 }
+
+
 /* Адаптивность */
 @media (max-width: 1200px) {
   .catalog {
@@ -1671,6 +1673,135 @@ section
 {
   padding: 60px 0 60px 0;
 }
+.about_brands_desc
+{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.about_brands_desc div
+{
+  width: 50%;
+}
+.about_brands_desc h3
+{
+  font-family: 'Bebas Neue';
+  font-weight: 700;
+  font-size: 40px;
+  width: 60%;
+  margin-bottom: 20px;
+}
+.about_brands_desc p
+{
+  font-weight: 400;
+  font-size: 16px;
+  width: 70%;
+}
+.about_brands_logos
+{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; /* Расстояние между элементами */
+  margin-bottom: 15px; /* Отступ между строками */
+  height: 412px;
+}
+
+/* Ширины для элементов в первой строке */
+.about_brand_logo:nth-child(1) { width: 15%; } /* Маленький */
+.about_brand_logo:nth-child(2) { width: 30%; } /* Средний */
+.about_brand_logo:nth-child(3) { width: 50%; } /* Большой */
+
+/* Ширины для элементов во второй строке */
+.about_brand_logo:nth-child(4) { width: 50%; }  /* Большой */
+.about_brand_logo:nth-child(5) { width: 30%; }  /* Средний */
+.about_brand_logo:nth-child(6) { width: 15%; }  /* Маленький */
+
+.about_brand_logo
+{
+  width: 100%;
+  background-color: #303030;
+  padding: 15px;
+  align-content: center;
+  text-align: center;
+}
+.about_brand_logo img
+{
+  height: 100px;
+  max-width: 250px;
+  max-height: 60%;
+}
+
+.guarantee_title
+{
+    display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.guarantee_title span
+{
+  width: 75%;
+  justify-items: end;
+}
+.guarantee_title span p
+{
+  font-family: 'Inter';
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  text-align: right;
+}
+.guarantee_title span p:nth-of-type(2)
+{
+  width: 67%;
+  text-align: left;
+}
+
+
+.about_documents_grid
+{
+    display: flex;
+    gap: 20px;
+}
+.about_document
+{
+  width: 25%;
+}
+.about_document_photo
+{
+  width: 100%;
+  margin-bottom: 10px;
+}
+.about_document_title
+{
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.about_document_photo p
+{
+  font-size: 16px;
+  font-weight: 400px;
+}
+.question_guarantee
+{
+  font-family: 'Bebas Neue';
+  font-weight: 700;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.desc_guarantee
+{
+  padding-left: 50%;
+  padding-top: 0;
+  font-size: 16px;
+  font-family: 'Inter';
+  font-size: 16px;
+  font-weight: 400;
+}
+
 /* Адаптивность для страницы товара */
 @media (max-width: 1200px) {
   .product-main {
