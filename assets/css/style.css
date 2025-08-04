@@ -672,11 +672,14 @@ footer hr
   padding-top: 10vh;
   margin-bottom: 20px;
 }
-.breadcrumbs div a
+.breadcrumbs div
 {
-  opacity: 50%;
+  color: #808080;
 }
-
+.breadcrumbs span
+{
+  color: #FFFFFF;
+}
 
 /* Стили для поиска */
 .search_wrapper {
