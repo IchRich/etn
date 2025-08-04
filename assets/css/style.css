@@ -103,7 +103,10 @@ header
   width: 100%;
   margin: auto;
 }
-
+.header_logo
+{
+  width: 100px;
+}
 .header {
   padding: 20px 0;
   background: 00;
@@ -164,14 +167,14 @@ header
   background: 
     linear-gradient(to bottom, #000000bd, #2b2b2b4d),
     url(../img/backSvg.svg) center center / contain no-repeat;
-  padding: 45vh 0 100px;
+  padding: 46vh 0 100px;
   text-align: left;
 }
 
 .hero_title {
   margin-bottom: 20px
 }
-section .hero_title
+section.hero_title
 {
   width: 90%;
   margin: 0 auto;
