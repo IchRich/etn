@@ -1246,6 +1246,7 @@ footer hr
   overflow: hidden;
   height: 100%;
   width: 50%;
+  justify-content: center;
 }
 
 .quantity-btn {
@@ -1981,8 +1982,6 @@ section
 .quantity-btn {
   width: 30px;
   height: 30px;
-  background: #f0f0f0;
-  border: 1px solid #ddd;
   cursor: pointer;
 }
 
