@@ -121,3 +121,71 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+
+
+// document.addEventListener('DOMContentLoaded', function() {
+//   // Элементы
+//   const cartIcon = document.querySelector('a[href="cart.html"]');
+//   const cartOverlay = document.getElementById('cartOverlay');
+//   const cartModal = document.getElementById('cartModal');
+//   const cartClose = document.querySelector('.cart-close');
+  
+//   // Открытие корзины
+//   cartIcon.addEventListener('click', function(e) {
+//     e.preventDefault();
+//     cartOverlay.style.display = 'block';
+//     cartModal.classList.add('active');
+//     document.body.style.overflow = 'hidden'; // Блокируем скролл страницы
+//   });
+  
+//   // Закрытие корзины
+//   function closeCart() {
+//     cartOverlay.style.display = 'none';
+//     cartModal.classList.remove('active');
+//     document.body.style.overflow = 'auto';
+//   }
+  
+//   cartOverlay.addEventListener('click', closeCart);
+//   cartClose.addEventListener('click', closeCart);
+  
+//   // Управление количеством
+//   document.querySelectorAll('.quantity-btn').forEach(btn => {
+//     btn.addEventListener('click', function() {
+//       const isPlus = this.classList.contains('plus');
+//       const quantityEl = this.parentElement.querySelector('span');
+//       let quantity = parseInt(quantityEl.textContent);
+      
+//       if (isPlus) {
+//         quantity++;
+//       } else if (quantity > 1) {
+//         quantity--;
+//       }
+      
+//       quantityEl.textContent = quantity;
+//       updateTotal();
+//     });
+//   });
+  
+//   // Удаление товара
+//   document.querySelectorAll('.item-remove').forEach(btn => {
+//     btn.addEventListener('click', function() {
+//       this.closest('.cart-item').remove();
+//       updateTotal();
+//     });
+//   });
+  
+//   // Обновление итогов
+//   function updateTotal() {
+//     // Здесь будет логика расчета суммы
+//     // Для WP это будет интегрировано с WooCommerce
+//     console.log('Обновление суммы заказа');
+//   }
+  
+//   // Обработка формы
+//   document.querySelector('.cart-form').addEventListener('submit', function(e) {
+//     e.preventDefault();
+//     // Здесь будет отправка формы
+//     alert('Заказ оформлен! В реальной системе это будет интегрировано с WooCommerce');
+//     closeCart();
+//   });
+// });
