@@ -25,7 +25,7 @@
   <section class="hero">
     <div class="container hero_container">
       <h1 class="hero_title main_hero">
-      Высокое качество, долгий срок <br>службы – гарантия от&nbsp;компании&nbsp;«ЭТНО»
+      Высокое качество, долгий срок службы – гарантия от&nbsp;компании&nbsp;«ЭТНО»
       </h1>
       <p class="hero_subtitle">Только качественный металлорежущий инструмент</p>
       <a href="#" class="btn btn--yellow">Связаться с нами</a>
@@ -37,7 +37,15 @@
     <div class="container">
       <h2>Каталог</h2>
       <div class="catalog_search">
-        <input type="text" placeholder="Текст запроса" class="catalog_input">
+        <div class="search_wrapper">
+          <img src="assets/img/IconSearch.svg" alt="" class="search_icon">
+          <input type="text" placeholder="Текст запроса" class="catalog_input" id="mainSearchInput">
+          <div class="search_autocomplete" id="searchAutocomplete" style="display: none;">
+            <div class="autocomplete_results">
+              <!-- Результаты поиска будут добавляться сюда -->
+            </div>
+          </div>
+        </div>
         <button class="btn btn--yellow">Найти</button>
       </div>
       <div class="catalog_grid">
@@ -97,8 +105,11 @@
     <div class="container about_container">
       <div class="about_left">
       <div class="about_text">
-        <h2 class="section-title">О компании + FAQ</h2>
+        <h2 class="section-title">О компании</h2>
         <div>
+        <p class="about_misc misc_add">Наша компания принимает участие в масштабной отраслевой выставке, которая по праву считается главным региональным проектом России в сфере металлообработки. Это уникальное мероприятие лидирует по количеству представленного оборудования, разнообразию мировых брендов 
+        и общей площади экспозиции. В рамках выставки проходит насыщенная деловая программа, включающая промышленные конференции с участием более 100 ведущих экспертов всероссийского 
+        и регионального уровня. </p>
         <p class="about_desc">Компания ЭТНО является надежным партнером для многих предприятий и организаций. Мы стремимся к долгосрочным отношениям с клиентами и всегда готовы предложить им наилучшие условия сотрудничества. За годы нашей работы мы завоевали доверие и уважение со стороны наших партнеров и продолжаем развиваться, расширяя наш ассортимент и улучшая качество нашей продукции.</p>
         <div class="about_facts">
           <div class="about_fact"><strong>12</strong> лет на рынке</div>
@@ -107,29 +118,39 @@
           </div>
         </div>
       </div>
-      <div class="about_signature">
-        <p class="about_misc">Екатеринбург с 17 по 20 марта 2025 г.</p>
-        <img src="assets/img/photo.png" alt="">
-      </div>
       </div>
       <div class="about_right">
-      <div class="about_event">
-        <h3>Мы на специализированной промышленной выставке</h3>
+        <div class="about_row">
+          <h3>Мы на специализированной промышленной выставке</h3>
+          <p class="about_misc">Екатеринбург с 17 по 20 марта 2025 г.</p>
+        </div>
+        <div class="about_row">
+        <p class="about_misc misc_hide">Наша компания принимает участие в масштабной отраслевой выставке, которая по праву считается главным региональным проектом России в сфере металлообработки. Это уникальное мероприятие лидирует по количеству представленного оборудования, разнообразию мировых брендов 
+        и общей площади экспозиции. В рамках выставки проходит насыщенная деловая программа, включающая промышленные конференции с участием более 100 ведущих экспертов всероссийского 
+        и регионального уровня. </p>
         <p class="about_misc">Наша компания принимает участие в масштабной отраслевой выставке, которая по праву считается главным региональным проектом России в сфере металлообработки. Это уникальное мероприятие лидирует по количеству представленного оборудования, разнообразию мировых брендов 
         и общей площади экспозиции. В рамках выставки проходит насыщенная деловая программа, включающая промышленные конференции с участием более 100 ведущих экспертов всероссийского 
         и регионального уровня. </p>
-        <img src="assets/img/expo.jpg" alt="" class="about_img">
+        </div>
+        <div class="about_row">
+          <img src="assets/img/expo.jpg" alt="" class="about_img">
+          <div class="about_photo">
+            <img src="assets/img/photo.png" alt="">
+            <img src="assets/img/asda.jpg" alt="">
+            <img src="assets/img/photo.png" alt="">
+            <img src="assets/img/asda.jpg" alt="">
+          </div>
+        </div>
+        <div class="about_row">
         <p class="about_misc">Эти профессиональные дискуссии позволяют нам быть в курсе последних тенденций и перспективных направлений развития отрасли. Особый интерес представляет международный раздел выставки, где представлены 4 коллективных стенда из Китая, а также экспозиции 20 компаний. </p>
-      </div>
-      <div class="about_photo">
-        <img src="assets/img/asda.jpg" alt="">
-      </div>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="faq">
   <div class="container">
+    <h2 class="section-title">Часто задаваемые вопросы</h2>
     <div class="faq_item">
       <button class="faq_button" data-number="{1}">
         <span class="faq_question">Как оплатить заказ?</span>
@@ -184,20 +205,17 @@
   </section>
   
   <section class="text">
-    <div class="container text_container">
+    <div class="container">
+      <h2 class="section-title">Заголовок</h2>
+    <div class="text_container">
       <div class="text_item"><p>Значимость этих проблем настолько очевидна, что новая модель организационной деятельности влечет за собой процесс внедрения и модернизации соответствующих условий активизации. Значимость этих проблем настолько очевидна, что высококачественный прототип будущего проекта предполагает независимые способы реализации приоретизации разума над эмоциями. Как принято считать, явные признаки победы институционализации призывают нас к новым свершениям, которые, в свою очередь, должны быть подвергнуты целой серии независимых исследований! С другой стороны, глубокий уровень погружения требует от нас анализа направлений прогрессивного развития! 
       </p></div>
 
       <div class="text_item"><p>Лишь предприниматели в сети интернет, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объединены в целые кластеры себе подобных. Наше дело не так однозначно, как может показаться: синтетическое тестирование, в своём классическом представлении, допускает внедрение системы массового участия. Разнообразный и богатый опыт говорит нам, что сплочённость команды профессионалов играет важную роль в формировании форм воздействия. Вот вам яркий пример современных тенденций — дальнейшее развитие различных. 
       </p></div>
 
-      <div class="text_item"><p>Вот вам яркий пример современных тенденций — дальнейшее развитие различных форм деятельности напрямую зависит от приоретизации разума над эмоциями. В своём стремлении повысить качество жизни, они забывают, что внедрение современных методик однозначно определяет каждого участника как способного принимать собственные решения касаемо как самодостаточных, так и внешне зависимых концептуальных решений. В целом, конечно, консультация с широким активом напрямую зависит от соответствующих условий активизации! Сложно сказать, почему тщательные исследования конкурентов могут быть объективно рассмотрены соответствующими инстанциями.
-      </p></div>
-
-      <div class="text_item"><p>Являясь всего лишь частью общей картины, диаграммы связей, превозмогая сложившуюся непростую экономическую ситуацию, ограничены исключительно образом мышления. Лишь сторонники тоталитаризма в науке объективно рассмотрены соответствующими инстанциями! С учётом сложившейся международной обстановки, постоянное информационно-пропагандистское обеспечение нашей деятельности предполагает независимые способы реализации кластеризации усилий. Кстати, активно развивающиеся страны третьего мира, инициированные исключительно синтетически, объединены в целые кластеры себе подобных. 
-      </p></div>
-
       </div>
+    </div>
   </section>
 
   <section class="contact">
@@ -264,71 +282,111 @@
   </footer>
   
 
-<!-- <div class="cart-overlay" id="cartOverlay"></div>
+<div class="cart-overlay" id="cartOverlay"></div>
+<div class="search_overlay" id="searchOverlay"></div>
+<div class="overlay-mask" id="overlayMask"></div>
 
 
 <div class="cart-modal" id="cartModal">
   <div class="cart-header">
-    <h2>Ваша корзина</h2>
-    <button class="cart-close">&times;</button>
+    <div class="cart-header-left">
+      <h2>ВАШ ЗАКАЗ</h2>
+      <a href="#" class="cart-clear">Очистить корзину</a>
+    </div>
+    <button class="cart-close">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22.5 7.5L7.5 22.5M7.5 7.5L22.5 22.5" stroke="black" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
   </div>
   
   <div class="cart-body">
 
     <div class="cart-items">
-      <div class="cart-item">
-        <img src="assets/img/dolbnaylkDisk.jpg" alt="Товар 1">
-        <div class="item-details">
-          <h3>Долбяк дисковый М0,6 Z=108 В Р18 20гр dпос=31,75мм в Белгороде</h3>
-          <div class="item-price">₽2,500</div>
-          <div class="item-quantity">
-            <button class="quantity-btn minus">-</button>
-            <span>1</span>
-            <button class="quantity-btn plus">+</button>
-          </div>
-        </div>
-        <button class="item-remove">&times;</button>
-      </div>
+             <div class="cart-item">
+         <div class="cart-item-image">
+           <img src="assets/img/dolbnaylkDisk.jpg" alt="Товар 1">
+         </div>
+         <div class="cart-item-info">
+           <h3 class="cart-item-title">Долбяк дисковый М0,6 Z=108 В Р18 20гр dпос=31,75мм в Белгороде</h3>
+           <div class="cart-item-qty">
+             <button class="quantity-btn minus">-</button>
+             <span>1</span>
+             <button class="quantity-btn plus">+</button>
+           </div>
+         </div>
+         <div class="cart-item-pricing">
+           <p class="cart-item-price">Цена с НДС <b>5 988 рублей</b></p>
+           <p class="cart-item-price-alt">Цена без НДС <b>4 990 рублей</b></p>
+         </div>
+         <button class="item-remove">
+           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+             <path d="M18 6L6 18M6 6L18 18" stroke="black" stroke-width="2" stroke-linecap="round"/>
+           </svg>
+         </button>
+       </div>
+      
+             <div class="cart-item">
+         <div class="cart-item-image">
+           <img src="assets/img/dolbnaylkDisk.jpg" alt="Товар 2">
+         </div>
+         <div class="cart-item-info">
+           <h3 class="cart-item-title">Долбяк дисковый М0,6 Z=108 В Р18 20гр dпос=31,75мм в Белгороде</h3>
+           <div class="cart-item-qty">
+             <button class="quantity-btn minus">-</button>
+             <span>1</span>
+             <button class="quantity-btn plus">+</button>
+           </div>
+         </div>
+         <div class="cart-item-pricing">
+           <p class="cart-item-price">Цена с НДС <b>5 988 рублей</b></p>
+           <p class="cart-item-price-alt">Цена без НДС <b>4 990 рублей</b></p>
+         </div>
+         <button class="item-remove">
+           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+             <path d="M18 6L6 18M6 6L18 18" stroke="black" stroke-width="2" stroke-linecap="round"/>
+           </svg>
+         </button>
+       </div>
       
     </div>
     
     <div class="cart-total">
       <div class="total-row">
-        <span>Промежуточный итог:</span>
-        <span>₽5,000</span>
+        <span>Сумма с НДС:</span>
+        <span>17 964 ₽</span>
       </div>
       <div class="total-row">
-        <span>Доставка:</span>
-        <span>₽500</span>
-      </div>
-      <div class="total-row grand-total">
-        <span>Всего:</span>
-        <span>₽5,500</span>
+        <span>Сумма без НДС:</span>
+        <span>14 970 ₽</span>
       </div>
     </div>
     
     <form class="cart-form">
-      <h3>Данные для заказа</h3>
-      <div class="form-group">
-        <label for="name-company">Компания</label>
-        <input type="text" id="name-company" required>
+      <div class="form-row">
+        <div class="form-group">
+          <input type="text" id="name-company" placeholder="Компания" required>
+        </div>
+        <div class="form-group">
+          <input type="tel" id="phone" placeholder="Телефон" required>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="phone">Телефон</label>
-        <input type="tel" id="phone" required>
+      <div class="form-row">
+        <div class="form-group">
+          <input type="text" id="name" placeholder="Лицо" required>
+        </div>
+        <div class="form-group">
+          <input type="text" id="comment" placeholder="Комментарий">
+        </div>
       </div>
-      <div class="form-group">
-        <label for="name">Лицо</label>
-        <input type="text" id="name" required>
-      </div>
-      <div class="form-group">
-        <label for="comment">Комментарий</label>
-        <textarea id="comment"></textarea>
-      </div>
-      <button type="submit" class="checkout-btn">Оформить заказ</button>
+      <label class="cart-checkbox">
+        <input type="checkbox" required>
+        Принимаю условия обработки персональных данных.
+      </label>
+      <button type="submit" class="checkout-btn">Отправить заказ</button>
     </form>
   </div>
-</div> -->
+</div>
 <script src="assets/js/script.js"></script>
 </body>
 </html>

@@ -312,6 +312,56 @@
         
       <a href="https://kant.studio/" target="_blank"><p>Сайт разработан</p><img src="assets/img/KantLogo.svg" alt=""></a></div>
   </footer>
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-modal" id="cartModal">
+    <div class="cart-header">
+      <div class="cart-header-left">
+        <h2>ВАШ ЗАКАЗ</h2>
+        <a href="#" class="cart-clear">Очистить корзину</a>
+      </div>
+      <button class="cart-close">
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22.5 7.5L7.5 22.5M7.5 7.5L22.5 22.5" stroke="black" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+    <div class="cart-body">
+      <div class="cart-items"></div>
+      <div class="cart-total">
+        <div class="total-row">
+          <span>Сумма с НДС:</span>
+          <span>0 ₽</span>
+        </div>
+        <div class="total-row">
+          <span>Сумма без НДС:</span>
+          <span>0 ₽</span>
+        </div>
+      </div>
+      <form class="cart-form">
+        <div class="form-row">
+          <div class="form-group">
+            <input type="text" id="name-company" placeholder="Компания" required>
+          </div>
+          <div class="form-group">
+            <input type="tel" id="phone" placeholder="Телефон" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <input type="text" id="name" placeholder="Лицо" required>
+          </div>
+          <div class="form-group">
+            <input type="text" id="comment" placeholder="Комментарий">
+          </div>
+        </div>
+        <label class="cart-checkbox">
+          <input type="checkbox" required>
+          Принимаю условия обработки персональных данных.
+        </label>
+        <button type="submit" class="checkout-btn">Отправить заказ</button>
+      </form>
+    </div>
+  </div>
 
 <script src="assets/js/script.js"></script>
 </body>
