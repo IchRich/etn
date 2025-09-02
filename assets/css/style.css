@@ -1004,29 +1004,7 @@ footer hr
   font-weight: 500;
   font-size: 22px;
 }
-.brand_buttons
-{
-  display: flex;
-  gap: 10px;
-}
-.brand_button
-{
-  background-color: #303030;
-  padding: 10px 20px;
-  border: 1px solid #404040;
-  height: 60px;
-  color: #FFFFFF;
-  font-size: 14px;
-  border-radius: 4px;
-  transition: all 0.3s ease;
-}
-.brand_button:hover {
-  background-color: #404040;
-}
-.brand_button.active {
-  border-color: #FBBB02;
-  color: #000;
-}
+/* brand_buttons removed per requirements */
 .grid_buttons
 {
   width: auto;
