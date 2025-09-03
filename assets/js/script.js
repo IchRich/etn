@@ -288,9 +288,9 @@ document.addEventListener('DOMContentLoaded', function() {
           <p class="product-card_availability">${product.availability}</p>
           <div class="product-card_actions">
             <div class="product-card_qty">
-              <button class="quantity-btn minus">-</button>
+              <button class="quantity-btn minus"><img src="assets/img/minus.svg" alt="-"></button>
               <span>1</span>
-              <button class="quantity-btn plus">+</button>
+              <button class="quantity-btn plus"><img src="assets/img/plus.svg" alt="+"></button>
             </div>
             <button class="btn btn--yellow">Добавить в корзину</button>
           </div>
