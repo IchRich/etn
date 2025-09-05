@@ -451,3 +451,52 @@ document.addEventListener('DOMContentLoaded', function() {
     if (e.key === 'Escape') closeMobileSearch();
   });
 });
+
+// Burger Menu Functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const burgerMenu = document.getElementById('burgerMenu');
+  const burgerToggle = document.querySelector('.menu');
+  const burgerClose = document.getElementById('burgerMenuClose');
+
+  function openBurgerMenu() {
+    burgerMenu.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeBurgerMenu() {
+    burgerMenu.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  // Open menu
+  if (burgerToggle) {
+    burgerToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      openBurgerMenu();
+    });
+  }
+
+  // Close menu
+  if (burgerClose) {
+    burgerClose.addEventListener('click', function(e) {
+      e.preventDefault();
+      closeBurgerMenu();
+    });
+  }
+
+  // Close menu when clicking outside
+  if (burgerMenu) {
+    burgerMenu.addEventListener('click', function(e) {
+      if (e.target === burgerMenu) {
+        closeBurgerMenu();
+      }
+    });
+  }
+
+  // Close menu on Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && burgerMenu.classList.contains('active')) {
+      closeBurgerMenu();
+    }
+  });
+});
