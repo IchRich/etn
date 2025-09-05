@@ -1147,7 +1147,7 @@ footer hr
 {
   display: flex;
   justify-content: space-between;
-  flex-direction: column;
+  flex-direction: row;
 }
 .catalog_found h2
 {
@@ -2808,6 +2808,10 @@ section
 
 /* Адаптивность для страницы товара */
 @media (max-width: 769px) {
+  .catalog_found
+  {
+    display: table-column;
+  }
   /* Show mobile search icon on mobile */
   .catalog_search-mobile { display: flex; align-items: center; }
   .catalog_search { display: none; }
