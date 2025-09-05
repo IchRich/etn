@@ -406,3 +406,48 @@ document.addEventListener('DOMContentLoaded', function() {
   // Скрывать выпадающий список при скролле страницы
   window.addEventListener('scroll', hideAutocomplete, { passive: true });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const mobileToggle = document.getElementById('mobileSearchToggle');
+  const catalogSearch = mobileToggle ? mobileToggle.closest('.catalog_search') : null;
+  if (mobileToggle && catalogSearch) {
+    mobileToggle.addEventListener('click', function() {
+      catalogSearch.classList.toggle('open');
+    });
+  }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const mobileToggle = document.getElementById('mobileSearchToggle');
+  const searchPopup = document.getElementById('searchPopup');
+  const searchOverlay = document.getElementById('searchOverlay');
+  const overlayMask = document.getElementById('overlayMask');
+
+  function openMobileSearch() {
+    if (searchPopup) searchPopup.style.display = 'flex';
+    if (searchOverlay) searchOverlay.style.display = 'block';
+    if (overlayMask) overlayMask.style.display = 'none';
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMobileSearch() {
+    if (searchPopup) searchPopup.style.display = 'none';
+    if (searchOverlay) searchOverlay.style.display = 'none';
+    if (overlayMask) overlayMask.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+
+  if (mobileToggle) {
+    mobileToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      openMobileSearch();
+    });
+  }
+  if (searchPopup) {
+    searchPopup.addEventListener('click', function(e) {
+      if (e.target === searchPopup) closeMobileSearch();
+    });
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeMobileSearch();
+  });
+});
