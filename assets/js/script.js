@@ -500,3 +500,37 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+// Product Mobile Collapsible Sections
+document.addEventListener('DOMContentLoaded', function() {
+  const sectionHeaders = document.querySelectorAll('.product-mobile-section-header');
+  
+  sectionHeaders.forEach(header => {
+    header.addEventListener('click', function() {
+      const targetId = this.getAttribute('data-target');
+      const content = document.getElementById(targetId);
+      const isActive = this.classList.contains('active');
+      
+      // Close all other sections
+      sectionHeaders.forEach(otherHeader => {
+        if (otherHeader !== this) {
+          otherHeader.classList.remove('active');
+          const otherTargetId = otherHeader.getAttribute('data-target');
+          const otherContent = document.getElementById(otherTargetId);
+          if (otherContent) {
+            otherContent.classList.remove('active');
+          }
+        }
+      });
+      
+      // Toggle current section
+      if (isActive) {
+        this.classList.remove('active');
+        content.classList.remove('active');
+      } else {
+        this.classList.add('active');
+        content.classList.add('active');
+      }
+    });
+  });
+});
