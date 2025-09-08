@@ -759,7 +759,7 @@ footer hr
   width: 20px;
   height: 20px;
   opacity: 0.6;
-  filter: brightness(0) saturate(100%); /* сделать иконку темной */
+  filter: brightness(0) saturate(100%) opacity(0.4); /* сделать иконку темной */
 }
 .search_wrapper input {
   flex: 1;
@@ -1018,7 +1018,7 @@ footer hr
   height: 36px; 
   border: none; 
   border-radius: 50%; 
-  background: transparent url('../img/IconSearch.svg') center/16px 16px no-repeat; 
+  background: transparent url('../img/IconSearch.svg') center/30px 30px no-repeat; 
   cursor: pointer;
 }
 
@@ -1083,6 +1083,7 @@ footer hr
   transition: right 0.3s ease;
   padding: 20px;
   box-sizing: border-box;
+  height: 120vh;
 }
 
 .burger-menu.active {
@@ -2140,7 +2141,7 @@ footer hr
   width: 100%;
   height: 100%;
   border-radius: 8px;
-  object-fit: fill;
+  object-fit: cover;
 }
 .about_life_years
 {
@@ -2160,7 +2161,7 @@ footer hr
   font-size: 100px;
   line-height: 0.8;
 }
-.about_life_left
+.about_life_left, .about_life_right
 {
   display: flex;
   flex-direction: column;
@@ -2184,12 +2185,6 @@ footer hr
   opacity: 60%;
   font-size: 20px;
   font-weight: 400;
-}
-.about_life_right
-{
-  display: flex;
-  gap: 20px;
-  flex-direction: column;
 }
 .about_life_stat
 {
@@ -2226,6 +2221,7 @@ footer hr
   display: flex;
   padding: 20px;
   border: 1px solid #6A6A6A;
+  margin-bottom: 30px;
 }
 .about_slider_arrow
 {
@@ -2239,6 +2235,10 @@ footer hr
 {
   width: 830px;
   height: 470px;
+}
+.about_slider_thumb img
+{
+  object-fit: cover;
 }
 .about_slider_caption
 {
@@ -2315,6 +2315,7 @@ section
   gap: 15px; /* Расстояние между элементами */
   margin-bottom: 15px; /* Отступ между строками */
   height: 412px;
+  justify-content: space-between;
 }
 
 /* Ширины для элементов в первой строке */
@@ -2340,6 +2341,7 @@ section
   height: 100px;
   max-width: 250px;
   max-height: 60%;
+  object-fit: fill;
 }
 
 .guarantee_title
@@ -2383,12 +2385,9 @@ section
 
 .about_documents_grid
 {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 20px;
-}
-.about_document
-{
-  width: 25%;
 }
 .about_document_photo
 {
@@ -2484,7 +2483,7 @@ section
   right: -100%;
   width: 100%;
   max-width: 970px;
-  height: 100vh;
+  height: 120vh;
   background: #fff;
   z-index: 1000;
   overflow-y: auto;
@@ -2775,22 +2774,71 @@ section
 }
 /* Адаптивность */
 @media (max-width: 1366px) {
-  .catalog {
-    flex-direction: column;
+  .about_title span
+  {
+    width: 69%;
   }
-  
+  .about_title span p:first-of-type
+  {
+    text-align: left;
+  }
+  .overlay_photo1
+  {
+    left: 20%;
+  }
+  .overlay_photo2
+  {
+    left: 7%;
+  }
+  .overlay_photo3
+  {
+    left: 20%;
+  }
+  .about_facts
+  {
+    justify-content: space-evenly;
+  }
   .catalog_sidebar {
-    width: 100%;
+    width: 25%;
     margin-bottom: 30px;
     order: 2; /* На мобильных сайдбар остается снизу */
   }
-  
+  .about_brands_desc p, .about_brands_desc h3
+  {
+    width: 100%;
+  }
   .catalog_content {
     order: 1; /* На мобильных контент остается сверху */
   }
-  
+  .about_life_years
+  {
+    margin-left: 0;
+    width: 100%;
+  }
+  .about_photo_placeholder
+  {
+    width: 100%;
+  }
   .filter {
     position: static;
+  }
+  .about_slider_main
+  {
+    width: 50%;
+  }
+  .slider_container
+  {
+    flex-direction: column-reverse;
+    width: 50%;
+  }
+  .about_slider_thumb
+  {
+    width: 100%;
+  }
+  .about_slider
+  {
+    gap: 20px;
+    justify-content: space-between;
   }
   /* merged from later 1366px block */
   .hero
@@ -2834,7 +2882,14 @@ section
     position: relative;
     margin: 20px 0;
   }
-  
+  .catalog_header
+  {
+    margin-bottom: 30px;
+  }
+  .catalog_header h2
+  {
+    margin: 0;
+  }
   .catalog_mobile-search-input {
     width: 100%;
     height: 50px;
@@ -3819,9 +3874,17 @@ section
   {
     padding-left: 25%;
   }
-  .about_document
+  .about_documents_grid
   {
-    width: 50%;
+    grid-template-columns: 1fr 1fr;
+  }
+  .about_document:nth-child(n+3)
+  {
+    display: none;
+  }
+  .about_document_title, .about_document_description
+  {
+    display: none;
   }
   .about_document_photo
   {
