@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 346.56 219.37">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #faba02;
+      }
+    </style>
+  </defs>
+  <polygon class="cls-1" points="126.68 73.03 126.68 73.02 51.79 73.02 51.79 127.7 142.17 127.7 142.17 164.37 0 164.37 0 219.37 197.82 219.37 197.82 73.03 126.68 73.03"/>
+  <rect width="126.68" height="54.68"/>
+  <path class="cls-1" d="M346.56,0v54.68h-72.37v164.69h-55.65V54.68h-73.01V0h201.03Z"/>
+</svg>
