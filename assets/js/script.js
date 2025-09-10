@@ -16,6 +16,23 @@ document.querySelectorAll('.faq_button').forEach(button => {
   });
 
   let lastScrollY = window.scrollY;
+  // Global body scroll lock helpers
+  let __bodyScrollY = 0;
+  function lockBodyScroll() {
+    try {
+      __bodyScrollY = window.scrollY || window.pageYOffset || 0;
+      document.body.classList.add('no-scroll');
+      document.body.style.top = `-${__bodyScrollY}px`;
+    } catch (e) {}
+  }
+  function unlockBodyScroll() {
+    try {
+      document.body.classList.remove('no-scroll');
+      const y = __bodyScrollY || 0;
+      document.body.style.top = '';
+      window.scrollTo(0, y);
+    } catch (e) {}
+  }
 let ticking = false;
 const header = document.querySelector('.header');
 
@@ -164,14 +181,14 @@ document.addEventListener('DOMContentLoaded', function() {
     e.preventDefault();
     cartOverlay.style.display = 'block';
     cartModal.classList.add('active');
-    document.body.style.overflow = 'hidden'; // Блокируем скролл страницы
+    lockBodyScroll(); // Надежно блокируем скролл страницы
   });
   
   // Закрытие корзины
   function closeCart() {
     cartOverlay.style.display = 'none';
     cartModal.classList.remove('active');
-    document.body.style.overflow = 'auto';
+    unlockBodyScroll();
   }
   
   // Очистка корзины
@@ -422,18 +439,27 @@ document.addEventListener('DOMContentLoaded', function() {
   const searchPopup = document.getElementById('searchPopup');
   const searchOverlay = document.getElementById('searchOverlay');
   const overlayMask = document.getElementById('overlayMask');
+  const catalogHeader = document.querySelector('.catalog_header');
+  const popupInner = document.querySelector('.search_popup_inner');
 
   function openMobileSearch() {
     if (searchPopup) searchPopup.style.display = 'flex';
     if (searchOverlay) searchOverlay.style.display = 'block';
     if (overlayMask) overlayMask.style.display = 'none';
-    document.body.style.overflow = 'hidden';
+    // Position popup inner to overlay the catalog_header
+    if (catalogHeader && popupInner) {
+      const rect = catalogHeader.getBoundingClientRect();
+      popupInner.style.left = rect.left + 'px';
+      popupInner.style.top = rect.top + 'px';
+      popupInner.style.width = rect.width + 'px';
+    }
+    // Do not lock body; close on scroll instead
   }
   function closeMobileSearch() {
     if (searchPopup) searchPopup.style.display = 'none';
     if (searchOverlay) searchOverlay.style.display = 'none';
     if (overlayMask) overlayMask.style.display = 'none';
-    document.body.style.overflow = 'auto';
+    // nothing
   }
 
   if (mobileToggle) {
@@ -450,6 +476,17 @@ document.addEventListener('DOMContentLoaded', function() {
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') closeMobileSearch();
   });
+  // Close on scroll/resize and reposition when needed
+  let closeOnScroll = function() { closeMobileSearch(); };
+  window.addEventListener('scroll', closeOnScroll, { passive: true });
+  window.addEventListener('resize', function(){
+    if (searchPopup && searchPopup.style.display === 'flex' && catalogHeader && popupInner) {
+      const rect = catalogHeader.getBoundingClientRect();
+      popupInner.style.left = rect.left + 'px';
+      popupInner.style.top = rect.top + 'px';
+      popupInner.style.width = rect.width + 'px';
+    }
+  });
 });
 
 // Burger Menu Functionality
@@ -460,12 +497,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function openBurgerMenu() {
     burgerMenu.classList.add('active');
-    document.body.style.overflow = 'hidden';
+    lockBodyScroll();
   }
 
   function closeBurgerMenu() {
     burgerMenu.classList.remove('active');
-    document.body.style.overflow = '';
+    unlockBodyScroll();
   }
 
   // Open menu
