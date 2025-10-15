@@ -147,26 +147,22 @@ header
     background 0.4s ease;
   transform: translateY(0);
   background: transparent;
-  /* Для плавного появления/исчезновения */
   pointer-events: auto;
 }
 
-/* Класс для фона при скролле */
 .header.scrolled {
-  background: rgba(0, 0, 0, 0.7); /* Черный с 70% прозрачностью */
-  backdrop-filter: blur(5px); /* Эффект размытия для современных браузеров */
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
 }
 
-/* Класс для скрытия хедера */
 .header.hidden {
   transform: translateY(-100%);
-  pointer-events: none; /* Отключаем взаимодействие */
+  pointer-events: none;
 }
 
-/* Для браузеров без поддержки backdrop-filter */
 @supports not (backdrop-filter: blur(5px)) {
   .header.scrolled {
-    background: rgba(0, 0, 0, 0.85); /* Более темный фон */
+    background: rgba(0, 0, 0, 0.85);
   }
 }
 
@@ -726,8 +722,6 @@ footer hr
   margin: 0 auto;
 }
 
-/* каталог */
-
 .breadcrumbs
 {
   padding-top: 10vh;
@@ -742,7 +736,6 @@ footer hr
   color: #FFFFFF;
 }
 
-/* Стили для поиска */
 .search_wrapper {
   display: flex;
   align-items: center;
@@ -753,7 +746,7 @@ footer hr
   gap: 15px;
   flex: 1;
   position: relative;
-  z-index: 999; /* выше затемнения и выпадашки */
+  z-index: 999;
   background-color: white;
   border-radius: 8px 0 0 8px;
   overflow: hidden;
@@ -762,7 +755,7 @@ footer hr
   width: 20px;
   height: 20px;
   opacity: 0.6;
-  filter: brightness(0) saturate(100%) opacity(0.4); /* сделать иконку темной */
+  filter: brightness(0) saturate(100%) opacity(0.4);
 }
 .search_wrapper input {
   flex: 1;
@@ -784,7 +777,6 @@ footer hr
   font-size: 16px;
 }
 
-/* Автодополнение поиска */
 .search_autocomplete {
   position: absolute;
   top: 100%;
@@ -798,10 +790,9 @@ footer hr
   max-height: 400px;
   overflow-y: auto;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  margin-top: -1px; /* Убираем двойную границу */
+  margin-top: -1px; 
 }
 
-/* Автодополнение: карточка как в списке каталога */
 .search_autocomplete .product-card { 
   display: flex; 
   align-items: center; 
@@ -977,7 +968,6 @@ footer hr
   background: #FFDA6F;
 }
 
-/* Затемнение фона при открытом автодополнении */
 .search_overlay {
   position: fixed;
   top: 0;
@@ -985,11 +975,10 @@ footer hr
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.3);
-  z-index: 900; /* ниже поля поиска и выпадашки */
+  z-index: 900;
   display: none;
 }
 
-/* Затемнять только контент ниже блока поиска */
 .overlay-mask {
   position: fixed;
   left: 0;
@@ -1000,7 +989,6 @@ footer hr
   backdrop-filter: blur(2px);
 }
 
-/* Мягкий верх затемнения (плавный градиент у края) */
 .overlay-mask::before {
   content: '';
   position: absolute;
@@ -1014,7 +1002,6 @@ footer hr
 .catalog_header { display: flex; align-items: center; justify-content: space-between; margin: 10px auto; flex-wrap: wrap; gap: 16px; }
 .catalog_heading { font-family: 'Bebas Neue'; font-size: 55px; text-transform: uppercase; font-size: 700; line-height: 0.9;}
 
-/* Mobile search icon - hidden by default */
 .catalog_search-mobile { display: none; }
 .catalog_mobileIcon { 
   width: 36px; 
@@ -1025,7 +1012,6 @@ footer hr
   cursor: pointer;
 }
 
-/* Search popup overlay for mobile */
 .search_popup { 
   position: fixed; 
   inset: 0; 
@@ -1068,24 +1054,20 @@ footer hr
   border-radius: 0 4px 4px 0;
 }
 
-/* Desktop: show full search, hide mobile icon */
 @media (min-width: 1025px) {
   .catalog_search-mobile { display: none; }
   .catalog_search { display: flex; }
-  
-  /* Hide mobile search and filters on desktop */
+
   .catalog_mobile-search,
   .catalog_mobile-filters {
     display: none;
   }
   
-  /* Hide mobile collapsible sections on desktop */
   .product-mobile-sections {
     display: none;
   }
 }
 
-/* Burger Menu Styles */
 .no-scroll {
   overflow: hidden !important;
   position: fixed;
@@ -1162,7 +1144,6 @@ footer hr
   border-radius: 2px;
 }
 
-/* Mobile responsive widths */
 @media (max-width: 440px) {
   .burger-menu {
     width: 80%;
@@ -1184,7 +1165,6 @@ footer hr
 {
   margin: 0;
 }
-/* brand_buttons removed per requirements */
 .grid_buttons
 {
   display: flex;
@@ -1215,23 +1195,17 @@ footer hr
   margin-bottom: 40px;
 }
 
-/* Активная кнопка вида */
 .grid_button.active svg rect { fill: #FBBB02; }
-/* Цвет текста кнопок не меняем при активном состоянии */
 .grid_button.active { color: inherit; }
-/* Активная иконка должна быть желтой, неактивная белой */
 .grid_button svg rect { fill: white; }
 .grid_button.active svg rect { fill: #FBBB02; }
 
-/* Режимы отображения каталога */
 .carts_grid { display: grid; }
-/* Точно 3 карточки в ряд по умолчанию */
 .carts_grid.carts_grid--grid { grid-template-columns: repeat(3, 1fr); }
 .carts_grid--list {
   grid-template-columns: 1fr;
 }
 
-/* Карточка в режиме списка */
 .carts_grid--list .product-card { 
   display: flex;
   align-items: center;
@@ -1375,19 +1349,16 @@ footer hr
   color: #000000;
 }
 
-/* Спрятать количество в режиме плитки */
 .carts_grid--grid .product-card_qty { display: none; }
 
-/* Показывать количество в режиме списка */
 .carts_grid--list .product-card_qty { display: flex; height: 60px;
   width: 154px;
   justify-content: space-between;}
 
-/* Ограничить список максимум двумя элементами */
-/* показывать все карточки в списке */
+
 .carts_grid--list .product-card { display: flex; }
 
-/* Центровка контента в строке списка */
+
 .carts_grid--list .product-card_title,
 .carts_grid--list .product_articul,
 .carts_grid--list .product-card_price,
@@ -1399,7 +1370,6 @@ footer hr
 }
 .carts_grid--list .product-card_actions .btn { margin-left: auto; }
 
-/* Основная структура каталога */
 .catalog {
   display: flex;
   gap: 40px;
@@ -1409,16 +1379,15 @@ footer hr
 .catalog_sidebar {
   width: 320px;
   flex-shrink: 0;
-  order: 2; /* Перемещаем сайдбар в конец (справа) */
+  order: 2;
   margin-bottom: 100px;
 }
 
 .catalog_content {
   flex: 1;
-  order: 1; /* Перемещаем контент в начало (слева) */
+  order: 1;
 }
 
-/* Стили для фильтров */
 .filter {
   position: sticky;
   top: 20px;
@@ -1551,7 +1520,6 @@ footer hr
   color: #808080;
 }
 
-/* Кнопки фильтров */
 .filter_buttons {
   margin-top: 30px;
   display: flex;
@@ -2338,8 +2306,8 @@ section
 {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px; /* Расстояние между элементами */
-  margin-bottom: 15px; /* Отступ между строками */
+  gap: 15px;
+  margin-bottom: 15px;
   height: 412px;
   justify-content: space-between;
 }
