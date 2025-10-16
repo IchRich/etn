@@ -3251,7 +3251,7 @@ section
   }
   .about_slider_thumb
   {
-    height: 350px;
+    height: 530px;
   }
   .about_life_center
   {
@@ -3276,6 +3276,7 @@ section
     margin-top: 20px;
     object-fit: cover;
     display: block;
+      border-radius: 8px;
   }
   .about_slider_photo
   {
@@ -3905,7 +3906,8 @@ section
   }
   .about_documents_grid
   {
-    grid-template-columns: 1fr 1fr;
+      display: none;
+    /*grid-template-columns: 1fr 1fr;*/
   }
   .about_document:nth-child(n+3)
   {
@@ -4121,4 +4123,15 @@ section
     display: flex;
     width: 100%;
   }
+}
+
+@media (max-width: 425px) {
+    .about_slider_main{
+        width: 100%
+
+    }
+    .slider_container{
+        width: 100%;
+    }
+
 }
