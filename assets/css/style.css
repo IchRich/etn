@@ -2771,7 +2771,7 @@ section
   display: none;
 }
 /* Адаптивность */
-@media (max-width: 1366px) {
+@media (max-width: 1466px) {
   .about_title span
   {
     width: 57%;
@@ -3906,8 +3906,7 @@ section
   }
   .about_documents_grid
   {
-      display: none;
-    /*grid-template-columns: 1fr 1fr;*/
+      grid-template-columns: 1fr 1fr;
   }
   .about_document:nth-child(n+3)
   {
@@ -4134,4 +4133,110 @@ section
         width: 100%;
     }
 
+}
+
+@media (max-width: 440px) {
+    .about_documents_grid{
+        display: none;
+    }
+}
+@media (min-width: 440px) {
+    .about_documents_grid2{
+        display: none;
+
+
+    }
+
+
+}
+
+@media (max-width: 440px) {
+    .about_documents_grid2.documents-slider {
+        display: block;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .about_documents_grid2.documents-slider::-webkit-scrollbar { display: none; }
+
+    .documents-slider-wrapper {
+        display: flex;
+        gap: 15px;
+        min-width: min-content;
+    }
+
+    .document-slide {
+        flex: 0 0 calc(50% - 7.5px);
+        scroll-snap-align: start;
+    }
+}
+
+/* Элементы документа */
+.about_documents_grid2 .about_document {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.about_documents_grid2 .about_document:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Фото */
+.about_documents_grid2 .about_document_photo {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.about_documents_grid2 .about_document_photo img {
+    width: 100%;
+    height: 100%;
+
+}
+
+/* Текстовая часть */
+
+.about_documents_grid2 .about_document_title {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 12px 0;
+    color: #333;
+    line-height: 1.3;
+}
+
+
+
+/* Навигационные точки */
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+    padding: 0 10px;
+}
+
+.slider-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ddd;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.slider-dot.active {
+    background-color: #333;
+    transform: scale(1.2);
 }
