@@ -3185,6 +3185,7 @@ section
   {
     font-size: 16px;
     margin-bottom: 15px;
+    margin-top: 15px;
   }
   .footer_column li
   {
@@ -3602,7 +3603,12 @@ section
    {
     width: 50%;
    }
-   
+    .footer_container{
+        flex-wrap: inherit;
+        gap: 20px 57px;
+    }
+
+
 }
 
 @media (max-width: 440px) 
