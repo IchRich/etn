@@ -2534,7 +2534,7 @@ section
 }
 
 .cart-body {
-  padding: 20px 120px 20px 40px;
+  padding: 20px 20px 20px 40px;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -2666,7 +2666,6 @@ section
   display: flex;
   gap: 20px;
   color: #000;
-  margin: 0 120px 0 40px;
 }
 
 .total-row {
@@ -2683,7 +2682,6 @@ section
 .cart-form {
   display: flex;
   flex-direction: column;
-  padding: 0px 120px 0px 40px;
 }
 
 .form-row {
@@ -2709,18 +2707,18 @@ section
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  font-size: 14px;
+  font-size: 17px;
   margin-bottom: 30px;
   cursor: pointer;
-  color: #000;
+  color: #ccc;
 }
 
 .cart-checkbox input[type="checkbox"] {
   appearance: none;
   -webkit-appearance: none;
-  width: 18px;
+  width: 32px;
   height: 18px;
-  border: 1px solid #000;
+  border: 1px solid #ccc;
   background: none;
   cursor: pointer;
   margin: 0;
@@ -3985,8 +3983,9 @@ section
   }
   .footer_column p
   {
-    font-size: 16px;
+    font-size: 22px;
     margin-bottom: 15px;
+    margin-top: 15px;
   }
   .footer_column li
   {
@@ -4239,4 +4238,20 @@ section
 .slider-dot.active {
     background-color: #333;
     transform: scale(1.2);
+}
+
+.checkbox a{
+    text-decoration: #999999;
+}
+@media (max-width: 376px) {
+    .about_slider_thumb {
+        height: 218px;
+        border-radius: 15px;
+    }
+    .about_photo_placeholder img{
+        border-radius: 15px;
+    }
+    .contact_checkbox input {
+        width: 36px;
+    }
 }
