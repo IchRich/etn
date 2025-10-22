@@ -4243,15 +4243,18 @@ section
 .checkbox a{
     text-decoration: #999999;
 }
-@media (max-width: 376px) {
+@media (max-width: 450px) {
     .about_slider_thumb {
         height: 218px;
         border-radius: 15px;
     }
-    .about_photo_placeholder img{
+
+    .about_photo_placeholder img {
         border-radius: 15px;
     }
+
     .contact_checkbox input {
         width: 36px;
     }
 }
+
