@@ -4278,6 +4278,10 @@ section
     .checkbox{
         width: 100%;
     }
+    .footer_form form label p
+    {
+      margin-top: 0;
+    }
 
 }
 
