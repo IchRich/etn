@@ -3989,7 +3989,6 @@ section
   }
   .footer_column p
   {
-    font-size: 22px;
     margin-bottom: 15px;
     margin-top: 15px;
   }
@@ -4181,6 +4180,9 @@ section
     .about_slider_main{
         width: 100%;
     }
+    .checkbox1{
+        width: 50px;
+    }
 }
 
 /* Элементы документа */
@@ -4266,6 +4268,10 @@ section
 
     .contact_checkbox input {
         width: 36px;
+        height: 36px;
+    }
+    .footer_container{
+        flex-wrap: wrap;
     }
 }
 
