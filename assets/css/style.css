@@ -57,7 +57,9 @@ html, body {
   border-radius: 8px;
 }
 
-
+.underline {
+ font-size: 10px;
+}
 a {
   color: inherit;
   text-decoration: none;
@@ -576,7 +578,7 @@ h2
 .contact_form p
 {
   font-family: 'Inter';
-  font-size: 30px;
+  /*font-size: 30px;*/
   font-weight: 600;
   width: 70%;
 }
@@ -3989,8 +3991,10 @@ section
   }
   .footer_column p
   {
-    margin-bottom: 15px;
-    margin-top: 15px;
+    /*margin-bottom: 15px;*/
+    /*margin-top: 15px;*/
+      display: grid;
+
   }
   .footer_column li
   {
@@ -4180,9 +4184,7 @@ section
     .about_slider_main{
         width: 100%;
     }
-    .checkbox1{
-        width: 50px;
-    }
+
 }
 
 /* Элементы документа */
@@ -4267,11 +4269,23 @@ section
     }
 
     .contact_checkbox input {
-        width: 36px;
-        height: 36px;
+        width: 18px;
+        height: 18px;
     }
     .footer_container{
         flex-wrap: wrap;
+    }
+    .checkbox{
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 375px) {
+    .contact_checkbox input {
+        width: 18px;
+        height: 18px;
     }
 }
 
