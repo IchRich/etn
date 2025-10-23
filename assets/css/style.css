@@ -4152,7 +4152,6 @@ section
 
     }
 
-
 }
 
 @media (max-width: 440px) {
@@ -4175,6 +4174,12 @@ section
     .document-slide {
         flex: 0 0 calc(50% - 7.5px);
         scroll-snap-align: start;
+    }
+    .slider_container{
+        width: 100%;
+    }
+    .about_slider_main{
+        width: 100%;
     }
 }
 
